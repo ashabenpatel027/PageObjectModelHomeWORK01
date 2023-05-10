@@ -16,7 +16,7 @@ public class CompareProductpage  extends  Utils {
     private By _ProductComparison = By.linkText("product comparison");
     private By _ClearList = By.className("clear-list");
 
-    public void userShouldBeCompareAproduct(){
+    public void verifyUserShouldBeCompareAproduct(){
         //This all action calling global into mainMethod
 
         clickOnElement(_htcM8Android);

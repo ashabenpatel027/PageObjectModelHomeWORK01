@@ -13,7 +13,7 @@ public class BaseTest extends Utils {
     }
     @AfterMethod
     public void tearDown() {
-        driverManager.closeBrowser();
+     driverManager.closeBrowser();
     }
 
 

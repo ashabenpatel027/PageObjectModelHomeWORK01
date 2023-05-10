@@ -14,7 +14,7 @@ public class DriverManager  extends  Utils {
 
     public void openBrowser() {
         driver= new ChromeDriver();
-        //type the url
+        //type the URL
         driver.get("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
@@ -22,7 +22,7 @@ public class DriverManager  extends  Utils {
     }
 
     public void closeBrowser() {
-        driver.close();
+      //  driver.close();
 
 }}
 

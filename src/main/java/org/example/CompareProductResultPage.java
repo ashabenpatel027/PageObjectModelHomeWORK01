@@ -7,7 +7,7 @@ public class CompareProductResultPage  extends  Utils {
     //storing expected result
     static String expectedCompareProductMessage = "You have no items to compare.";
 
-public void userShouldBeAbleCompareAproduct(){
+public void verifyUserShouldBeAbleCompareAproduct(){
     //calling result in mainMethod
     String actualMessage = getTextFromElement(By.linkText("HTC One M8 Android L 5.0 Lollipop"));
     System.out.println("My Message :" + actualMessage);

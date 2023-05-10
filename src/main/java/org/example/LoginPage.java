@@ -13,9 +13,9 @@ public class LoginPage extends Utils {
         //click on login button
         clickOnElement(_LoginIco);
         //Type  email address
-        typeText(_EnterEmail, "kam@gmail.com");
+        typeText(_EnterEmail, "ash0@gmail.com");
         //Type password
-        typeText(_PassWord ,"asha1234");
+        typeText(_PassWord ,"test123");
         //click on
         clickOnElement(_LogInButtton);
 

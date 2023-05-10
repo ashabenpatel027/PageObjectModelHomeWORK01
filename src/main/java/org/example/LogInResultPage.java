@@ -8,7 +8,7 @@ public class LogInResultPage extends Utils {
     static String expectedReferProductMessage = "Your message has been sent.";
 
     public void OnlyRegisteredCustomerCanSendEmailToFri (){
-        String actualMessage = getTextFromElement(By.xpath("//div[@class='result']"));
+        String actualMessage =getTextFromElement(By.xpath("//div[@class='result']"));
         System.out.println("My Message:" + actualMessage);
         Assert.assertEquals(actualMessage, expectedReferProductMessage , "Successfully message send");
     }

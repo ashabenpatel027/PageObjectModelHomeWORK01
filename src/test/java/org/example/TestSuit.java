@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 public class TestSuit extends BaseTest
 {  // this will call all class here by  different variable
     HomePage homePage= new HomePage();
+
     RegisterPage registerPage = new RegisterPage();
     RegisterResultPage registerResultPage= new RegisterResultPage();
     VotePage votePage=new VotePage();
@@ -18,7 +19,13 @@ public class TestSuit extends BaseTest
     CompareProductResultPage compareProductResultPage = new CompareProductResultPage();
     LoginPage loginPage =new LoginPage();
     LogInResultPage logInResultPage =new LogInResultPage();
-
+    NewRelease newRelease=new NewRelease();
+    NewReleaseResultPage newReleaseResultPage =new NewReleaseResultPage();
+    BuildOwnComputerPage buildOwnComputerPage =new BuildOwnComputerPage();
+    BuildYourOwnCartPage buildYourOwnCartPage =new BuildYourOwnCartPage();
+    OrderConfirmPage orderConfirmPage =new OrderConfirmPage();
+    GuestCheckoutButton guestCheckoutButton= new GuestCheckoutButton();
+    FaceBookPage faceBookPage =new FaceBookPage();
 
     @Test
     public  void verifyUserShouldBeAbleToRegisterSuccessfully() {
@@ -31,7 +38,7 @@ public class TestSuit extends BaseTest
         @Test
     public  void verifyUserShouldBeAbleToDoCommunityPoll() {
 
-          //click on Excellent  button
+            //click on Excellent  button
             votePage.enterCummityPollDetails();
             //verify user should click vot button
             voteResultPage.verifyUserShouldVoteToCommunityPoll();
@@ -47,14 +54,14 @@ public class TestSuit extends BaseTest
         shoppingCartResult.verifyUserShouldBeAbleToShopping();}
     @Test
     public void VerifyUserShouldBeAbleToCompareProduct(){
-        compareProductpage.userShouldBeCompareAproduct();
-        compareProductResultPage.userShouldBeAbleCompareAproduct();
+        compareProductpage.verifyUserShouldBeCompareAproduct();
+        compareProductResultPage.verifyUserShouldBeAbleCompareAproduct();
 
     }
     @Test
     public  void VerifyUserShouldBeAbleToReferProductToFriend(){
         homePage.clickOnRegisterButton();
-        registerPage.enterRegistrationDetails01();
+        registerPage.enterRegistrationDetails();
 
         homePage.clickOnRegisterButton();
         loginPage.enterLoginEmail();
@@ -66,9 +73,52 @@ public class TestSuit extends BaseTest
         homePage.clickOnRegisterButton();
         registerPage.enterRegistrationDetails();
         loginPage.enterLoginEmail();
+       // logInResultPage.OnlyRegisteredCustomerCanSendEmailToFri();
         votePage.enterCummityPollDetails();
         voteResultPage.verifyUserShouldVoteToCommunityPoll();
+    }@Test
+    public void   verifyUserShouldBeAblePrintProductList(){
+        homePage.printOutForTheTitle();
+}
+    @Test
+    public void verifyUserShouldBeAbleToClickOnSearchButton(){
+        homePage.verifyUserShouldSearchAlertMessage();}
+    @Test
+    public void verifyUsherShouldBeAbleToClickOnVoteButton(){
+        homePage.verifyUserShouldClickOnVoteButtonAndDoAlertClick();
     }
+    @Test
+    public void verifyUsherShouldBeAbleToClickOnCurrencyBar(){
+        homePage.verifyUserShouldAbleToClickOnCurrency();
+    }
+    @Test
+    public void verifyUserShouldBeEnterProductName(){
+        homePage.verifyUserShouldBeAbleEnterProductName();
+    }@Test
+    public void verifyUserShouldAbleToClickOnNopCommerceRelease(){
+        homePage.verifyUserShouldBeClickOnNopCom();
+        newRelease.verifyUsherShouldClickOnNewRelease();
+        newReleaseResultPage.verifyUserShouldBeAbleToRegisterSuccessfully();
+    }@Test
+    public void verifyUserShouldBeAbleToBuildYourOwnComputer(){
+        homePage.verifyUserShouldBeBuildYourOwnComputer();
+        buildOwnComputerPage.clickOnOwnComputer();
+        buildYourOwnCartPage.productShoppinCart();
+        buildYourOwnCartPage.checkOut();
+        guestCheckoutButton.guestCanCheckOutSuccessfully();
+        guestCheckoutButton.userCanEnterGuestDetail();
+        orderConfirmPage.getOrderConfirmation();}
+    @Test
+    public void verifyUserShouldBeAbleToClickOnFaceBookSuccessfully(){
+        homePage.verifyUsherShouldClickOnFaceBookLogo();
+        faceBookPage.UserShouldBeAbleTOLoginFaceBook();
+        homePage.veryfiUserShouldSeeWelComeMessage();
+    }
+
+
+
+
+
 
 
 }

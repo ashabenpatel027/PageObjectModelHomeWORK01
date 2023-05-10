@@ -14,4 +14,5 @@ public class RegisterResultPage extends Utils {
         System.out.println("My message:" + actualMessage);
         Assert.assertEquals(actualMessage, expectedRegistrationCompleteMsg, "Thanks for registration");
     }
+
 }
